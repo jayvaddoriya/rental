@@ -1,7 +1,10 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import "@mantine/core/styles.css";
+import { MantineProvider } from "@mantine/core";
+import { theme } from "./theme";
+import REHeader from "@/components/REHeader";
+import RESubHeader from "@/components/RESubHeader";
+import REFooter from "@/components/REFooter";
 
 export const metadata = {
   title: "Rental",
@@ -11,7 +14,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <MantineProvider theme={theme}>
+        <body>
+          <REHeader />
+          <RESubHeader />
+          {children}
+          <REFooter />
+        </body>
+      </MantineProvider>
     </html>
   );
 }

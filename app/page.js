@@ -1,5 +1,7 @@
-import styles from "./page.module.css";
+import React from "react";
 
-export default function Home() {
-  return <>demo</>;
-}
+const Home = () => {
+  return <>Home</>;
+};
+
+export default Home;

@@ -1,0 +1,40 @@
+.input_root {
+  &[data-variant="primary"] {
+    & .input {
+      height: 50px;
+      border: 1px solid #dce8ff;
+      color: #757575;
+    }
+  }
+}
+.action_button_root {
+  border: 0 !important;
+  &[data-variant="primary"] {
+    & .icon {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.button_root {
+  &[data-variant="primary"] {
+    background-color: #046bfb;
+  }
+  &[data-variant="secondary"] {
+    background-color: #ffffff;
+    color: #046bfb;
+    border: 1px solid #046bfb;
+    &:hover {
+      background-color: #ffffff;
+      color: #046bfb;
+    }
+  }
+  &[data-variant="link"] {
+    background-color: transparent;
+    color: #525252;
+    &:hover {
+      background-color: transparent;
+      color: #525252;
+    }
+  }
+}
